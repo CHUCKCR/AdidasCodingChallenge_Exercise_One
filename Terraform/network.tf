@@ -3,12 +3,7 @@
 #classiclink necessary to support privates ip inside the VPC
 
 resource "aws_vpc" "vpc_adidas" {
-  cidr_block                       = var.cidr
-
-  tags = {
-      Name = var.tags
-    }
-}
+  cidr_block = var.cidr
 
 
 resource "aws_internet_gateway" "gw" {

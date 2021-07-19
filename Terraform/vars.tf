@@ -14,3 +14,8 @@ variable "ami_id" {
   type = map
   default = {eu-west-1 = "ami-0f377b303df4963ab"}
 }
+
+variable "vpc_cidr" {
+  description = "CIDR block for VPC"
+  type        = string
+  default     = "10.0.0.0/16"

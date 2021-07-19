@@ -11,3 +11,4 @@ resource "aws_instance" "ADIDAS" {
 
 # Security group assign to instance
   vpc_security_group_ids = [aws_security_group.allow_ssh.id]
+}

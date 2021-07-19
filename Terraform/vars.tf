@@ -22,14 +22,14 @@ variable "instance_type" {
   default = "t2.micro"
 
 
-  variable "key_name" {
+variable "key_name" {
   type    = "string"
   default = "ec2-challenge"
 }
 
 #FOR NETWORK
 
-  variable "instance_tenancy" {
+variable "instance_tenancy" {
   description = "A tenancy option for instances launched into the VPC"
   type        = string
   default     = "default"

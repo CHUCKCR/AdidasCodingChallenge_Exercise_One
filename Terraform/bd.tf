@@ -6,17 +6,17 @@ resource "aws_dynamodb_table" "basic-dynamodb-table" {
   hash_key       = "UserId"
   range_key      = "Name"
 
-  attribute {
+ attribute {
     name = "UserId"
     type = "S"
   }
 
-  attribute {
+ attribute {
     name = "Name"
     type = "S"
   }
 
-  tags = {
+ tags = {
     Name        = "dynamodb-table"
     Environment = "Training"
   }

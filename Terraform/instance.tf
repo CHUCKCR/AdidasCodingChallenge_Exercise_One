@@ -3,7 +3,7 @@
 
 resource "aws_instance" "ADIDAS" {
   ami           = lookup(var.ami_id, var.region)
-  instance_type = var.instance_type
+  instance_type = instance_type = "t2.micro"
 
 
 # Public Subnet assign to instance

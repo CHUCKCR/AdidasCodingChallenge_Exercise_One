@@ -4,25 +4,20 @@
 
 resource "aws_vpc" "vpc_adidas" {
   cidr_block = var.cidr
-
+}
 
 resource "aws_internet_gateway" "gw" {
   vpc_id = aws_vpc.vpc_adidas.id
 
-  tags = {
-    Name = "internet-gateway-demo"
-  }
 }
 
 resource "aws_subnet" "public_1" {
   vpc_id     = aws_vpc.vpc_adidas.id
   map_public_ip_on_launch = true
   cidr_block = "10.0.1.0/24"
-
-  tags = {
-    Name = "public_1-demo"
-  }
 }
+
+
 
 resource "aws_route_table" "route-public" {
   vpc_id = aws_vpc.vpc_adidas.id
@@ -32,9 +27,6 @@ resource "aws_route_table" "route-public" {
     gateway_id = aws_internet_gateway.gw.id
   }
 
-  tags = {
-    Name = "public-route-table-demo"
-  }
 }
 
 resource "aws_route_table_association" "public_1" {
